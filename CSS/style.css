@@ -18,40 +18,43 @@ html{
 }
 
 .navbar{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     position: sticky;
     top: 0;
     cursor: pointer;
+    z-index: 10;
 }
 .main{
+    
+    width: 100vw;
     display: flex;
-    width: 100%;
     /* background-color: black; */
 }
 #logo{
-    width: 20%;
-    margin: 7px 12px;
+    /* width: 20%; */
+    margin: 0.3rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 #logo img{
-    height: 50px;
+    height: 2.7rem;
 }
 .navbar .lists{
     list-style: none;
     display: flex;
     align-items: center;
-    padding: 0px 25px;
+    padding: 0 2rem;
 }
 .lists a{
      text-decoration: none;
      color: white;
-     padding: 0px 20px;
+     padding: 0 1.5rem;
 }
+
 .lists a:hover{
     background-color: white;
     color: black;
@@ -63,6 +66,15 @@ html{
     background-size: cover;
     background-blend-mode: darken;
 }
+.education{
+    text-align: center;
+    /* height: 50px; */
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-top: 3rem;
+    color: #173b6c;
+}
+
 .overview{
     height: 675px;
     display: flex;
@@ -81,8 +93,9 @@ html{
     width: 70%;
     
 }
-.firstHalf a{
+.firstHalf .button a{
     text-decoration: none;
+    font-size: 25px;
 }
 /* .head{
     text-align: center;
@@ -101,85 +114,182 @@ html{
     border:3px solid white;
     border-radius: 50%;
 }
-.part1{
-    background-color:white;
+.myabout{
+    width: 80%;
+    margin: 20px auto;
+    height: 100%;
 }
-.career{
-    border: 1px solid black;
-    width: 75%;
-    height: 11.35rem;
-    margin: auto;
-    border-radius: 57px;
+.myabout h2{
+    text-align: left;
+}
+.part1{
+    width: 100%;
     display: flex;
     align-items: center;
-    
-    background-color: white;
-}
-.career p{
-    text-align: center;
-    /* white-space: pre-wrap; */
-}
-.para{
-    font-size: 20px;
-    color: rgb(83, 83, 197);
-    font-family: none;
-    padding: 4px 0px;
+    justify-content: center;
+    margin: 40px auto;
+    /* height: 300px; */
+    /* flex-wrap: wrap; */
 }
 
-.education{
+.part1 .about1{
+    width: 40%;
+}
+
+.back{
+    height: 285px;
+    width: 100%;
+}
+.para{
+    font-size: 18px;
+    color: rgb(83, 83, 197);
+    font-family: none;
+    padding: 4px 30px;
+}
+.career{
+    text-align: left;
+    width: 60%;
+}
+/* .education{
     text-align: center;
     height: 50px;
     font-size: 30px;
     text-decoration: underline;
     margin-top: 30px;
+    color: #173b6c;
+} */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.row .collg{
+    margin: 0px 15px;
+
+}
+.row .collg span{
+    padding: 0px 2px;
+}
+.row .collg strong{
+    font-size: 17px;
+}
+.about-section{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.row li{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center
+}
+
+.educate1{
+    width: 1000px;
+    margin: auto;
 }
 .containor1{
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: 35px 0px;
-    border-top: groove;
-    width: 50%;
-    display: flex;
-    /* justify-content: center; */
-    margin: auto;
-    border-left: solid;
-    border-right: solid;
-    flex-direction: column;
-    background-color: white;
-    
-}
-.learn{
-    margin: 7px 35px;
-}
-.study{
-    margin: 7px 1px;
-}
-.high{
-    width: 100%;
-    /* margin: 0px 4px; */
-}
-.table-content{
+    /* width: 1000px; */
+    margin: 10px auto;
+    padding: 40px 0;
+    position: relative;
     box-sizing: border-box;
-    border-collapse: collapse;
-    margin-top: 25px;
-    /* font-size: 0.9em; */
-    width: 100%;
-    border: 1px solid black;
 }
-.table-content thead tr{
-    
-    background-color: rgb(40 158 158);
-    color: white;
+.containor1::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 88%;
+    background: #c5c5c5;
 }
-.table-content tbody tr{
-    text-align: center;
-    background-color: #f0f0f0;
-    color: black;
-    border-bottom: 1px solid black;
+.containor1 ul{
+    margin: 0;
+    padding: 0;
 }
-.table-content td{
-    padding: 12px 0px;
+.containor1 ul li{
+    position: relative;
+    width: 50%;
+    list-style: none;
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
+.containor1 ul li:nth-child(odd){
+    float: left;
+    text-align: right;
+    clear: both;
+}
+.containor1 ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.content{
+    padding-bottom: 20px;
+}
+.containor1 ul li:nth-child(odd)::before{
+content: "";
+position: absolute;
+top: 24px;
+right: -6px;
+width: 10px;
+height: 10px;
+background: rgb(196, 22, 22);
+border-radius: 50%;
+box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+}
+.containor1 ul li:nth-child(even)::before{
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: rgb(196, 22, 22);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+}
+.containor1 ul li h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: rgba(233, 33, 99, 1);
+}
+.containor1 ul li p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+
+.containor1 ul li:nth-child(odd) .time1{
+    margin: 0px;
+    position: absolute;
+    top: 16px;
+    right: -120px;
+    padding: 0px 12px;
+    background: rgba(233, 33, 99, 1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3);
+}
+.containor1 ul li:nth-child(even) .time1{
+    margin: 0px;
+    position: absolute;
+    top: 16px;
+    left: -120px;
+    padding: 0px 12px;
+    background: rgba(233, 33, 99, 1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3);
+}
+.containor1 ul li .time1{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+
 .tag{
     color: black;
 }
@@ -257,6 +367,7 @@ width: 70%;
     color: black;
     font-size: 14px;
     font-weight: 500;
+    z-index: -1;
 }
 
 
@@ -300,7 +411,10 @@ width: 70%;
     padding-top: 25px;
 }
 
-
+#Hire{
+    display: flex;
+    flex-direction: column;
+}
 
 #Hireme {
     border: 2px solid black;
@@ -350,9 +464,18 @@ width: 70%;
     background-color: rgb(31, 30, 30);
 }
 
-@media only screen and (max-width:630px) {
-    .navbar{
-        width: 50%;
+@media only screen and (max-width: 600px){
+    .part1{
+        flex-direction: column;
+        width: 100%;
     }
-    
+    .educate1{
+        width: 100%;
+    }
+    .navbar{
+        width: 100%;
+    }
+    #logo{
+        display: none;
+    }
 }
